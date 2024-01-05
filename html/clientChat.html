@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 1.4em;
+      padding: 15px;
+      margin: 0px;
+    }
+    div#messages>div {
+      background: #e8e8e8;
+      width: 42%;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border-bottom: 1px solid #fafafa;
+    }
+    div#messages>div:first-child {
+        background: #fff;
+        margin-bottom: 20px;
+        padding: 0px;
+    }
+    div#messages>div:last-child {
+      margin-bottom: 20px;
+    }
+    div#messages>div:nth-child(even) {
+      margin-left : 60px;
+    }
+    div#messages>div:nth-child(odd) {
+      margin-right : 60px;
+    }
+    input#messageBox {
+      width: -webkit-calc(45% - 12px);
+      width: -moz-calc(45% - 12px);
+      width: calc(45% - 12px);
+      display: block;
+      padding: 10px;
+    }
+    input[type="button"] {
+      display: block;
+      width: 20%;
+      margin-top: 10px;
+      background: #0a86e6;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 10px 5px;
+    }
+    input#clientName {
+      width: -webkit-calc(45% - 12px);
+      width: -moz-calc(45% - 12px);
+      width: calc(45% - 12px);
+      display: block;
+      padding: 10px;
+    }
+    input[type="button"]#connectButton {
+        display: inline;
+        width: 20%;
+        margin-top: 10px;
+        background: #0a86e6;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px 5px;
+      }
+    
+  </style>
+</head>
+<body>
+    <h3>Messages</h3>
+    <div id='messages'></div>
+    <input type='text' placeholder='SEND A MESSAGE' id='messageBox'>
+    <input type='button' id="send_Button" value='Send'>
+    <input type='text' placeholder='ENTER YOUR USERNAME' id='clientName'>
+    <input type='button' id="connectButton" value='Connect As'>
+    <input type='button' id='clearButton' value='Clear'>
+
+    
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src='clientChat.js'></script>
+</body>
+</html>
